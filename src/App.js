@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import bronze from './img/bronze.png';
 import prata from './img/prata.png';
 import ouro from './img/ouro.png';
+import feirao from './img/feirao.jpeg';
 
 const theme = createTheme({
   palette: {
@@ -21,7 +22,19 @@ function App() {
   const [pesquisa, setPesquisa] = React.useState('');
   const [filtroItems, setFiltroItems] = React.useState([]);
 
-  const items = ['Carro 1', 'Carro 2', 'Carro 3', 'Carro 4'];
+  const items = [
+    { nome: "carro1",
+      imagem: bronze,
+      descricao: "Descrição do carro 1",
+
+  },
+  { nome: "carro2",
+    imagem: prata,
+    descricao: "Descrição do carro 2",
+
+},
+
+];
 
   const handlePesquisa = () => {
     const results = items.filter(item =>
@@ -68,10 +81,17 @@ function App() {
             <Typography variant="h4" component="h1" gutterBottom>
               Fature muito com a melhor concessionária de seminovos do Brasil
             </Typography>
-            <Button variant="contained" color="primary" href="https://www.lionsseminovos.com.br">
+            <img
+            src={feirao}
+            alt="efeirao"
+            style={{  marginRight: "20px"}}
+            />
+          </Box>
+          <Box sx={{ my: 4, textAlign: 'center' }}>
+          <Button variant="contained" color="primary" href="https://www.lionsseminovos.com.br">
               Clique Aqui!
             </Button>
-          </Box>
+            </Box>
 
           <Box sx={{ my: 4, textAlign: 'center' }}>
             <Typography variant="h5" component="h2" gutterBottom>
@@ -103,6 +123,27 @@ function App() {
             </List>
           </Box>
         </Container>
+
+        <Box
+          sx={{
+            bgcolor: "secondary.main",
+            color: "white",
+            textAlign: "center",
+            p: 2,
+          }}
+        >
+          <Typography variant="body2">
+            &copy; {new Date().getFullYear()} Lions Seminovos. Todos os direitos reservados.
+          </Typography>
+          <IconButton
+            color="inherit"
+            href="https://www.instagram.com/lionsseminovos"
+            target="_blank"
+          >
+            <Instagram />
+            </IconButton>
+        </Box>
+
       </div>
     </ThemeProvider>
   );
