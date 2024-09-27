@@ -6,6 +6,10 @@ Este projeto consiste em uma página web para a Lions Seminovos, desenvolvida co
 
 A página foi construída usando React e Material-UI, com foco em usabilidade e design responsivo. Elementos visuais públicos da Lions Seminovos foram incorporados para refletir a identidade da marca.
 
+## Demonstração
+
+Confira a demonstração ao vivo do projeto: [Lions Seminovos Webpage](https://lionsseminovos.vercel.app/)
+
 ## Funcionalidades
 
 - **Barra de Navegação**: Inclui links para redes sociais.
@@ -39,10 +43,19 @@ A página foi construída usando React e Material-UI, com foco em usabilidade e 
    ```bash
    git clone https://github.com/britolmbs/LionsSeminovos.git
    cd LionsSeminovos
-   npm install
-   npm start
 
-  
-   
+Instale as Dependências
 
-Durante o desenvolvimento deste projeto, busquei equilibrar a funcionalidade com a estética, garantindo que a página não apenas funcione bem, mas também ofereça uma experiência de usuário atraente. O uso de Material-UI facilitou a implementação de um design responsivo e consistente. Além disso, a integração com o WhatsApp foi uma escolha estratégica para melhorar a acessibilidade de contato com os clientes.
+Certifique-se de ter o Node.js instalado e execute:
+
+    ```bash
+npm install
+
+2. Execute o Projeto
+
+Inicie o servidor de desenvolvimento:
+
+    ```bash
+npm start
+
+O projeto estará disponível em http://localhost:3000.
