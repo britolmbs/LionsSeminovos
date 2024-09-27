@@ -38,8 +38,8 @@ A página foi construída usando React e Material-UI, com foco em usabilidade e 
 
    ```bash
    git clone https://github.com/britolmbs/LionsSeminovos.git
-   cd LionsSeminovos
+   cd LionsSeminovos **
 
-   ##Reflexões sobre o Desenvolvimento
-   
+  
+    ##Reflexões sobre o Desenvolvimento 
 Durante o desenvolvimento deste projeto, busquei equilibrar a funcionalidade com a estética, garantindo que a página não apenas funcione bem, mas também ofereça uma experiência de usuário atraente. O uso de Material-UI facilitou a implementação de um design responsivo e consistente. Além disso, a integração com o WhatsApp foi uma escolha estratégica para melhorar a acessibilidade de contato com os clientes.
