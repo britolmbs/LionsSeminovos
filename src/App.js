@@ -1,44 +1,43 @@
 import React from "react";
-import { AppBar, Box, Button, Container, List, ListItem, TextField, Toolbar, Typography, IconButton } from "@mui/material";
-import { Facebook, LinkedIn, Instagram } from '@mui/icons-material';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import bronze from './img/bronze.png';
-import prata from './img/prata.png';
-import ouro from './img/ouro.png';
-import feirao from './img/feirao.jpeg';
+import {  AppBar, Box, Button, Container,List,  ListItem, TextField, Toolbar, Typography, IconButton,} from "@mui/material";
+import { Facebook, LinkedIn, Instagram } from "@mui/icons-material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import bronze from "./img/bronze.png";
+import prata from "./img/prata.png";
+import ouro from "./img/ouro.png";
+import feirao from "./img/feirao.jpeg";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#a60f14',
+      main: "#a60f14",
     },
     secondary: {
-      main: '#353238',
+      main: "#353238",
     },
   },
 });
 
 function App() {
-  const [pesquisa, setPesquisa] = React.useState('');
+  const [pesquisa, setPesquisa] = React.useState("");
   const [filtroItems, setFiltroItems] = React.useState([]);
 
   const items = [
-    { nome: "carro1",
+    {
+      nome: "carro1",
       imagem: bronze,
       descricao: "Descrição do carro 1",
-
-  },
-  { nome: "carro2",
-    imagem: prata,
-    descricao: "Descrição do carro 2",
-
-},
-
-];
+    },
+    {
+      nome: "carro2",
+      imagem: prata,
+      descricao: "Descrição do carro 2",
+    },
+  ];
 
   const handlePesquisa = () => {
-    const results = items.filter(item =>
-      item.toLowerCase().includes(pesquisa.toLowerCase())
+    const results = items.filter((item) =>
+      item.nome.toLowerCase().includes(pesquisa.toLowerCase())
     );
     setFiltroItems(results);
     alert(`Você Procurou por: ${pesquisa}`);
@@ -59,53 +58,76 @@ function App() {
               size="small"
               value={pesquisa}
               onChange={(e) => setPesquisa(e.target.value)}
-              sx={{ bgcolor: 'white', borderRadius: 1, mr: 2 }}
+              sx={{ bgcolor: "white", borderRadius: 1, mr: 2 }}
             />
             <Button variant="contained" color="secondary" onClick={handlePesquisa}>
               Buscar
             </Button>
-            <IconButton color="inherit" href="https://www.facebook.com/lionsseminovos" target="_blank">
+            <IconButton
+              color="inherit"
+              href="https://www.facebook.com/lionsseminovos"
+              target="_blank"
+            >
               <Facebook />
             </IconButton>
-            <IconButton color="inherit" href="https://www.linkedin.com/company/lions-seminovos/mycompany/?viewAsMember=true" target="_blank">
+            <IconButton
+              color="inherit"
+              href="https://www.linkedin.com/company/lions-seminovos/mycompany/?viewAsMember=true"
+              target="_blank"
+            >
               <LinkedIn />
             </IconButton>
-            <IconButton color="inherit" href="https://www.instagram.com/lionsseminovos" target="_blank">
+            <IconButton
+              color="inherit"
+              href="https://www.instagram.com/lionsseminovos"
+              target="_blank"
+            >
               <Instagram />
             </IconButton>
           </Toolbar>
         </AppBar>
 
         <Container>
-          <Box sx={{ my: 4, textAlign: 'center' }}>
+          <Box sx={{ my: 4, textAlign: "center" }}>
             <Typography variant="h4" component="h1" gutterBottom>
               Fature muito com a melhor concessionária de seminovos do Brasil
             </Typography>
             <img
-            src={feirao}
-            alt="efeirao"
-            style={{  marginRight: "20px"}}
+              src={feirao}
+              alt="Feirão"
+              style={{ width: "100%", maxWidth: "600px", height: "auto" }}
             />
           </Box>
-          <Box sx={{ my: 4, textAlign: 'center' }}>
-          <Button variant="contained" color="primary" href="https://www.lionsseminovos.com.br">
+          <Box sx={{ my: 4, textAlign: "center" }}>
+            <Button
+              variant="contained"
+              color="primary"
+              href="https://www.lionsseminovos.com.br"
+            >
               Clique Aqui!
             </Button>
-            </Box>
+          </Box>
 
-          <Box sx={{ my: 4, textAlign: 'center' }}>
+          <Box sx={{ my: 4, textAlign: "center" }}>
             <Typography variant="h5" component="h2" gutterBottom>
               Conheça nossas categorias
             </Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-              <img src={bronze} alt="Bronze" style={{ width: '100px', height: '100px' }} />
-              <img src={prata} alt="Prata" style={{ width: '100px', height: '100px' }} />
-              <img src={ouro} alt="Ouro" style={{ width: '100px', height: '100px' }} />
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap",
+                gap: 2,
+              }}
+            >
+              <img src={bronze} alt="Bronze" style={{ width: "100px", height: "100px" }} />
+              <img src={prata} alt="Prata" style={{ width: "100px", height: "100px" }} />
+              <img src={ouro} alt="Ouro" style={{ width: "100px", height: "100px" }} />
             </Box>
-            <Button 
-              variant="contained" 
-              color="secondary" 
-              href="https://www.lionsseminovos.com.br" 
+            <Button
+              variant="contained"
+              color="secondary"
+              href="https://www.lionsseminovos.com.br"
               sx={{ mt: 4, px: 5, py: 2 }}
             >
               Visite nosso site
@@ -118,7 +140,9 @@ function App() {
             </Typography>
             <List>
               {filtroItems.map((item, index) => (
-                <ListItem key={index}>{item}</ListItem>
+                <ListItem key={index}>
+                  {item.nome}: {item.descricao}
+                </ListItem>
               ))}
             </List>
           </Box>
@@ -141,9 +165,8 @@ function App() {
             target="_blank"
           >
             <Instagram />
-            </IconButton>
+          </IconButton>
         </Box>
-
       </div>
     </ThemeProvider>
   );
