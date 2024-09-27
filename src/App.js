@@ -2,6 +2,9 @@ import React from "react";
 import { AppBar, Box, Button, Container, List, ListItem, TextField, Toolbar, Typography, IconButton } from "@mui/material";
 import { Facebook, LinkedIn, Instagram } from '@mui/icons-material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import bronze from './img/bronze.png';
+import prata from './img/prata.png';
+import ouro from './img/ouro.png';
 
 const theme = createTheme({
   palette: {
@@ -75,9 +78,9 @@ function App() {
               Conheça nossas categorias
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-              <img src="./img/bronze.png" alt="Bronze" style={{ width: '100px', height: '100px' }} />
-              <img src="./img/prata.png" alt="Prata" style={{ width: '100px', height: '100px' }} />
-              <img src="./img/ouro.png" alt="Ouro" style={{ width: '100px', height: '100px' }} />
+              <img src={bronze} alt="Bronze" style={{ width: '100px', height: '100px' }} />
+              <img src={prata} alt="Prata" style={{ width: '100px', height: '100px' }} />
+              <img src={ouro} alt="Ouro" style={{ width: '100px', height: '100px' }} />
             </Box>
             <Button 
               variant="contained" 
