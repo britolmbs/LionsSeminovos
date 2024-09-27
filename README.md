@@ -38,7 +38,9 @@ A página foi construída usando React e Material-UI, com foco em usabilidade e 
 
    ```bash
    git clone https://github.com/britolmbs/LionsSeminovos.git
-   cd LionsSeminovos **
+   cd LionsSeminovos
+   npm install
+   npm start
 
   
     ##Reflexões sobre o Desenvolvimento 
