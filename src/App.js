@@ -1,5 +1,5 @@
 import React from "react";
-import {  AppBar, Box, Button, Container,List,  ListItem, TextField, Toolbar, Typography, IconButton,} from "@mui/material";
+import {  AppBar,  Box, Button, Container, TextField, Toolbar, Typography, IconButton, Grid,  Card, CardMedia, CardContent, } from "@mui/material";
 import { Facebook, LinkedIn, Instagram } from "@mui/icons-material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import bronze from "./img/bronze.png";
@@ -22,18 +22,27 @@ function App() {
   const [pesquisa, setPesquisa] = React.useState("");
   const [filtroItems, setFiltroItems] = React.useState([]);
 
-  const items = [
+  const items = React.useMemo(() => [
     {
-      nome: "carro1",
+      nome: "Carro Bronze",
       imagem: bronze,
-      descricao: "Descrição do carro 1",
+      descricao: "Descrição do carro bronze",
     },
     {
-      nome: "carro2",
+      nome: "Carro Prata",
       imagem: prata,
-      descricao: "Descrição do carro 2",
+      descricao: "Descrição do carro prata",
     },
-  ];
+    {
+      nome: "Carro Ouro",
+      imagem: ouro,
+      descricao: "Descrição do carro ouro",
+    },
+  ], []);
+
+  React.useEffect(() => {
+    setFiltroItems(items);
+  }, [items]);
 
   const handlePesquisa = () => {
     const results = items.filter((item) =>
@@ -92,20 +101,13 @@ function App() {
             <Typography variant="h4" component="h1" gutterBottom>
               Fature muito com a melhor concessionária de seminovos do Brasil
             </Typography>
-            <img
-              src={feirao}
-              alt="Feirão"
-              style={{ width: "100%", maxWidth: "600px", height: "auto" }}
-            />
-          </Box>
-          <Box sx={{ my: 4, textAlign: "center" }}>
-            <Button
-              variant="contained"
-              color="primary"
-              href="https://www.lionsseminovos.com.br"
-            >
-              Clique Aqui!
-            </Button>
+            <a href="https://www.lionsseminovos.com.br" target="_blank" rel="noopener noreferrer">
+              <img
+                src={feirao}
+                alt="Feirão"
+                style={{ width: "100%", maxWidth: "1500px", height: "auto", cursor: "pointer" }}
+              />
+            </a>
           </Box>
 
           <Box sx={{ my: 4, textAlign: "center" }}>
@@ -120,9 +122,9 @@ function App() {
                 gap: 2,
               }}
             >
-              <img src={bronze} alt="Bronze" style={{ width: "100px", height: "100px" }} />
-              <img src={prata} alt="Prata" style={{ width: "100px", height: "100px" }} />
-              <img src={ouro} alt="Ouro" style={{ width: "100px", height: "100px" }} />
+              <img src={bronze} alt="Bronze" style={{ width: "200px", height: "200px" }} />
+              <img src={prata} alt="Prata" style={{ width: "200px", height: "200px" }} />
+              <img src={ouro} alt="Ouro" style={{ width: "200px", height: "200px" }} />
             </Box>
             <Button
               variant="contained"
@@ -136,15 +138,28 @@ function App() {
 
           <Box sx={{ my: 4 }}>
             <Typography variant="h6" component="h3" gutterBottom>
-              Resultado da Busca:
+              Carros Disponíveis:
             </Typography>
-            <List>
+            <Grid container spacing={3}>
               {filtroItems.map((item, index) => (
-                <ListItem key={index}>
-                  {item.nome}: {item.descricao}
-                </ListItem>
+                <Grid item xs={12} sm={6} md={4} key={index}>
+                  <Card>
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={item.imagem}
+                      alt={item.nome}
+                    />
+                    <CardContent>
+                      <Typography variant="h6">{item.nome}</Typography>
+                      <Typography variant="body2" color="textSecondary">
+                        {item.descricao}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
               ))}
-            </List>
+            </Grid>
           </Box>
         </Container>
 
