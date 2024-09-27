@@ -6,6 +6,13 @@ import bronze from "./img/bronze.png";
 import prata from "./img/prata.png";
 import ouro from "./img/ouro.png";
 import feirao from "./img/feirao.jpeg";
+import carro from "./img/carro1.jpg";
+import carro2 from "./img/carro2.jpg";
+import carro3 from "./img/carro3.jpg";
+import carro4 from "./img/carro4.jpg";
+import carro5 from "./img/carro5.jpg";
+import carro6 from "./img/carro6.jpg";
+
 
 const theme = createTheme({
   palette: {
@@ -24,19 +31,34 @@ function App() {
 
   const items = React.useMemo(() => [
     {
-      nome: "Carro Bronze",
-      imagem: bronze,
-      descricao: "Descrição do carro bronze",
+      nome: "Nissan Kicks",
+      imagem: carro,
+      descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum interdum erat gravida maximus. Morbi eu interdum lacus. Praesent ac felis eget justo aliquet elementum sit amet id leo. Mauris aliquet arcu id diam gravida, non sagittis leo vulputate. Phasellus condimentum metus quis nisl feugiat, ut tristique ipsum facilisis. Ut vel urna justo. Nam tellus nunc, pharetra eget sapien eu, placerat pellentesque leo. Praesent vel interdum tellus, quis commodo leo. Curabitur ornare velit urna, sed.",
     },
     {
-      nome: "Carro Prata",
-      imagem: prata,
-      descricao: "Descrição do carro prata",
+      nome: "Nissan Sentra",
+      imagem: carro2,
+      descricao: "Integer faucibus quis enim sed consectetur. Mauris cursus lectus justo, eget consectetur dui bibendum sed. Etiam id neque massa. Nulla facilisi. Ut ullamcorper, eros ac efficitur rutrum, ipsum enim tincidunt ipsum, a volutpat justo purus nec lectus. Morbi gravida vitae metus at auctor. Proin consectetur mollis dolor, in hendrerit lorem eleifend vel. Ut est ante, lobortis vitae lorem sed, vestibulum facilisis mi. Morbi sodales faucibus libero, a molestie ante gravida ac. Proin sit amet diam.",
     },
     {
-      nome: "Carro Ouro",
-      imagem: ouro,
-      descricao: "Descrição do carro ouro",
+      nome: "Volkswagen Fox",
+      imagem: carro3,
+      descricao: "Vivamus vitae congue justo. Praesent hendrerit finibus lorem quis lacinia. Aliquam sagittis orci at ex condimentum, nec malesuada orci congue. Maecenas auctor in est ac tincidunt. Vestibulum vel turpis auctor, finibus sem ut, maximus enim. Vestibulum laoreet malesuada lectus, ac venenatis felis. Cras a magna eu justo cursus rutrum et tincidunt sem. Nam facilisis, ante eget dapibus gravida, magna nisl eleifend quam, in lacinia sem felis commodo tellus. Nulla pretium urna justo, non sagittis est.",
+    },
+    {
+      nome: "Volkswagen Saveiro",
+      imagem: carro4,
+      descricao: "Proin volutpat lectus in turpis tempus, et euismod elit laoreet. In non convallis purus, ut suscipit leo. Ut in sollicitudin massa. Cras tempor, enim sed ultrices congue, dolor ligula ultricies elit, id vehicula enim massa nec velit. Donec porttitor, erat et malesuada posuere, sem justo scelerisque nulla, sed suscipit eros nisi id sem. Donec accumsan euismod libero, ac accumsan massa. Etiam et tellus eleifend, efficitur libero et, finibus ante. Sed eu est egestas, viverra tellus.",
+    },
+    {
+      nome: "Fiat Mobi",
+      imagem: carro5,
+      descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas consectetur suscipit. Sed blandit viverra elementum. Nam volutpat cursus dui sed efficitur. Suspendisse sed vehicula ex. Pellentesque finibus, mauris at pharetra interdum, dui ante gravida leo, sed pulvinar diam purus sit amet felis. Suspendisse pulvinar ex quis est feugiat, eget ornare mauris posuere. Vivamus dignissim magna vitae quam faucibus, in porttitor nisi venenatis. Quisque id neque a nulla rhoncus ultricies. Suspendisse varius rutrum mi, in.",
+    },
+    {
+      nome: "Peugeot 208",
+      imagem: carro6,
+      descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac consectetur urna. Proin sagittis, quam eu tincidunt commodo, eros elit condimentum purus, ut ullamcorper mi mi sit amet erat. Duis ut tempor nisi. Sed efficitur blandit erat at dignissim. Duis dictum quam lectus, sed sagittis lectus posuere sed. Phasellus porttitor venenatis condimentum. Nam ac nunc sagittis ante auctor consequat. In pretium ullamcorper condimentum. Quisque eu ante dapibus, condimentum massa ut, efficitur augue. Morbi sit amet.",
     },
   ], []);
 
