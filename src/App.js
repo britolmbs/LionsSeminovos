@@ -177,6 +177,15 @@ function App() {
                       <Typography variant="body2" color="textSecondary">
                         {item.descricao}
                       </Typography>
+                      <Button
+                        variant="contained"
+                        color="primary"
+                        href={`https://wa.me/5521970951262?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20${item.nome}`}
+                        target="_blank"
+                        sx={{ mt: 2 }}
+                      >
+                        Contate-nos via WhatsApp
+                      </Button>
                     </CardContent>
                   </Card>
                 </Grid>
