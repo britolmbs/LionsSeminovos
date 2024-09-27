@@ -75,10 +75,18 @@ function App() {
               Conheça nossas categorias
             </Typography>
             <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
-              <Button variant="outlined">Bronze</Button>
-              <Button variant="outlined">Prata</Button>
-              <Button variant="outlined">Ouro</Button>
+              <img src="./img/bronze.png" alt="Bronze" style={{ width: '100px', height: '100px' }} />
+              <img src="./img/prata.png" alt="Prata" style={{ width: '100px', height: '100px' }} />
+              <img src="./img/ouro.png" alt="Ouro" style={{ width: '100px', height: '100px' }} />
             </Box>
+            <Button 
+              variant="contained" 
+              color="secondary" 
+              href="https://www.lionsseminovos.com.br" 
+              sx={{ mt: 4, px: 5, py: 2 }}
+            >
+              Visite nosso site
+            </Button>
           </Box>
 
           <Box sx={{ my: 4 }}>
