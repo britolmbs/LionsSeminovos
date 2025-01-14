@@ -71,7 +71,7 @@ function App() {
       item.nome.toLowerCase().includes(pesquisa.toLowerCase())
     );
     setFiltroItems(results);
-    alert(`Você Procurou por: ${pesquisa}`);
+    //alert(`Você Procurou por: ${pesquisa}`);
   };
 
   return (
